@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Microservice Client</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css} "/>
+</head>
+<body>
+<div class="container">
+
+    <h1> Your Cart </h1>
+    <a th:href="@{/}" >Retour à l'acceuil</a>
+
+    <div th:each="product : ${products}">
+            <p th:text= "${product.key.name}">Name</p>
+            <img th:src="${product.key.illustration}">
+            <p th:text= "${product.key.id}"> ID</p>
+            <p th:text= "${product.value}">quantité</p>
+            <p th:text= "${product.key.price}">prix</p>
+            <p th:text= "AAAAAAAAAAAAAAAAAAAAAAAA"></p>
+
+
+
+    </div>
+
+
+</div>
+
+</body>
+</html>
